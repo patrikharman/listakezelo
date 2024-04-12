@@ -2,7 +2,7 @@ export function htmlOsszeallit(lista) {
     let txt="<table class='table table-striped'>"
     txt+="<thead><tr><th>Név</th><th>Kor</th><th>Nem</th><th></th></tr>"
     txt+="<tbody>"
-    lista.forEach(elem => {
+    lista.forEach((elem,index) => {
         txt+=`<tr>`
         for (const kulcs in elem) {
             //console.log("kulcs",kulcs,elem[kulcs]);

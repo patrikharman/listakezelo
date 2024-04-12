@@ -1,6 +1,6 @@
 import { emberekLISTA } from "./adat.js";
 import { htmlOsszeallit, megjelenit } from "./listaMegjelenit.js";
-import {rendez, szures} from "./adatKezelo.js"
+import {rendez, szures,torol} from "./adatKezelo.js"
 /*jelenítsük meg a listánkat táblázatban,majd a listát tudjuk rendezni pl név szerint ha rákattintunk a táblázat fejlécére akkor rendezze be a táblázat sorait. tudjunk szűrni név alapján 
 tudjunk új adatot hozzáadni
 tudjunk törölni a táblázat egy sorát*/
