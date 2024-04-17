@@ -1,6 +1,7 @@
 import { emberekLISTA } from "./adat.js";
 import { htmlOsszeallit, megjelenit } from "./listaMegjelenit.js";
 import {rendez, szures,torol} from "./adatKezelo.js"
+import { ujAdat } from "./urlapKezelo.js";
 /*jelenítsük meg a listánkat táblázatban,majd a listát tudjuk rendezni pl név szerint ha rákattintunk a táblázat fejlécére akkor rendezze be a táblázat sorait. tudjunk szűrni név alapján 
 tudjunk új adatot hozzáadni
 tudjunk törölni a táblázat egy sorát*/
@@ -19,10 +20,11 @@ init(emberekLISTA)
 
 szuresEsemeny();
 
-function init(lista){
+export function init(lista){
     megjelenit(htmlOsszeallit(lista));
     rendezEsemeny();
     torolEsemeny();
+    ujAdat(emberekLISTA)
 }
 function rendezEsemeny(){
     const nevElem = $(".adatok table th").eq(0)
@@ -53,3 +55,8 @@ torolGomb.on("click",function(event){
     init(LISTA);
 });
 }
+
+
+ujAdat(emberekLISTA)
+console.log(emberekLISTA)
+init(emberekLISTA)
